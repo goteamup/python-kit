@@ -43,6 +43,7 @@ class Fragment(object):
                 "GeoPoint":       Fragment.GeoPoint,
                 "Group":          Fragment.Group,
                 "SliceZone":      Fragment.SliceZone
+                "Boolean":        Fragment.Boolean
             }
 
         fragment_type = data.get("type")
@@ -584,6 +585,10 @@ class Fragment(object):
 
         def __iter__(self):
             return iter(self.slices)
+    
+    class Boolean(FragmentElement):
+        def __init__(self, value):
+            self.value = value
 
 
 class StructuredText(object):
