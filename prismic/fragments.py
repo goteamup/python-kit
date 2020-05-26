@@ -42,8 +42,8 @@ class Fragment(object):
                 "Embed":          Fragment.Embed,
                 "GeoPoint":       Fragment.GeoPoint,
                 "Group":          Fragment.Group,
-                "SliceZone":      Fragment.SliceZone
-                "Boolean":        Fragment.Boolean
+                "SliceZone":      Fragment.SliceZone,
+                "Boolean":        Fragment.Boolean,
             }
 
         fragment_type = data.get("type")
