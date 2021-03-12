@@ -10,6 +10,7 @@ This module implements the Prismic API.
 
 from __future__ import (absolute_import, division, print_function, unicode_literals)
 
+import json
 import sys
 from copy import copy, deepcopy
 from .connection import get_json, urlparse
@@ -204,6 +205,8 @@ class SearchForm(object):
                 return field
             else:
                 return '"' + field + '"'
+        elif isinstance(field, bool):
+            return json.dumps(field)
         elif hasattr(field, '__iter__'):
             strings = []
             for item in field:
