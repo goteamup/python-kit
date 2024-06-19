@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import (absolute_import, division, print_function, unicode_literals)
+from __future__ import absolute_import, division, print_function, unicode_literals
 
-from collections import namedtuple, defaultdict, OrderedDict
-import logging
-import cgi
-import re
 import datetime
+import html as cgi
+import logging
+import re
+from collections import OrderedDict, defaultdict, namedtuple
 
 log = logging.getLogger(__name__)
 
